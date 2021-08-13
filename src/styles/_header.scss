@@ -1,0 +1,52 @@
+.header{
+    inline-size: 100%;
+    max-inline-size: 68.75rem;
+    z-index: 100;
+    margin-bottom: 2rem;
+
+    &__wrapper{
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__heading{
+        border-bottom: 1px solid  var( --Text-2);
+        padding-block-end: 1rem;
+        display: grid;
+        gap: 0.25rem;
+
+        @include tablet{
+            border: none;
+        }
+
+        h1{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--Text-1);
+
+            @include tablet{
+                font-size: 2rem;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        span{
+            color: var( --Text-2);
+            font-weight: bold;
+        }
+    }
+
+    &__switch{
+        margin-block: 1rem;
+        
+        label{
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            align-items: center;
+        }
+    }
+}
